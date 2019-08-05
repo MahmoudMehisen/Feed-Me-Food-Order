@@ -1,0 +1,66 @@
+/// إِنَّ مَعَ الْعُسْرِ يُسْرًا
+/// لَا أَبْرَحُ حَتَّىٰ أَبْلُغَ
+
+#include <bits/stdc++.h>
+
+#define LL long long
+#define LD long double
+
+#define HabdModeActive ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define S second
+#define F first
+#define PI acos(-1)
+#define MAX 5000005
+#define file freopen("input.txt","r",stdin); freopen("output.txt","w",stdout);
+#define inf 1000000
+
+using namespace std;
+
+
+int main() {
+
+    //HabdModeActive
+    freopen("file.txt","r",stdin);
+    freopen("food.txt","w",stdout);
+    vector<string> foods;
+    string s1;
+    while(1)
+    {
+        getline(cin,s1);
+        if(s1=="End")
+            break;
+        int x=s1.find("name");
+        if(x>=0)
+        {
+            int f=s1.find("\" : \"");
+            f+=5;
+            string sub;
+            while(s1[f]!='\"')
+            {
+                sub+=s1[f++];
+            }
+            foods.push_back(sub);
+        }
+    }
+    /*
+    for(auto x :foods)
+        cout<<x<<endl;*/
+
+    cout<<"{"<<endl<<"  \"entries\": ["<<endl;
+    for(auto x:foods)
+    {
+        cout<<"    {"<<endl;
+        cout<<"      \"value\": \""<<x<<"\","<<endl;
+        cout<<"      \"synonyms\": ["<<endl;
+        cout<<"        \""<<x<<"\""<<endl;
+        cout<<"      ]"<<endl;
+        cout<<"    },"<<endl;
+
+
+    }
+    cout<<"  ],"<<endl<<"}";
+
+
+
+    return 0;
+}
