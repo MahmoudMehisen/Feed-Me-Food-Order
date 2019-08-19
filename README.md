@@ -18,7 +18,8 @@ It's an android app use to order food anywhere and the food will arrive where us
 
 
 ## Demo Video
-https://youtu.be/PWDaUevDyeQ 
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/PWDaUevDyeQ/1.jpg)](http://www.youtube.com/watch?v=PWDaUevDyeQ)
 
 ## To see Orginal Repositories for app
 ### Feed Me (Client Side)
